@@ -1,0 +1,202 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: hsl(217, 12%, 63%);
+  background: hsl(216, 12%, 8%);
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+main {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-top: 4em;
+}
+
+
+
+.container,
+.thankyou-container {
+  width: 375px;
+  margin: 0 auto;
+  padding: 2em 2em 3em;
+  background: hsl(213, 19%, 18%);
+  border-radius: 1em;
+}
+
+.title {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 0;
+}
+
+.body-text {
+  margin-bottom: 2em;
+  line-height: 1.5rem;
+}
+.body-text a {
+  text-decoration: none;
+  color: hsl(217, 12%, 63%);
+}
+.body-text a:hover {
+  color: hsl(21, 91%, 50%);
+}
+.error-text {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: .8rem;
+  color: hsl(21, 91%, 50%);
+}
+
+.icon img {
+  background: hsl(214, 19%, 21%);
+  padding: 1em 1em;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.rate  {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 2em;
+  padding: 0;
+}
+.rate-item {
+  margin: 0;
+  background: hsl(214, 19%, 21%);
+  color: hsl(217, 12%, 63%);
+  outline: none;
+  border: none;
+  width: 3em;
+  height: 3em;
+  line-height: 3em;
+  border-radius: 50%;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: background 300ms;
+}
+
+.submit-btn {
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 2em;
+  background: hsl(25, 97%, 53%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  transition: background 300ms ease-in-out;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background: #fff;
+  color: hsl(25, 97%, 53%);
+}
+
+.rate-item:hover,
+.rate-item:focus {
+  background:hsl(25, 97%, 53%);
+  color:#fff;
+}
+
+footer{
+  margin: 3em 0 0;
+  padding-bottom: 2em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: .8rem;
+
+}
+footer a {
+  text-decoration: none;
+  color: hsl(217, 12%, 63%);
+}
+
+footer a:hover,
+footer a:focus {
+  color: hsl(25, 97%, 53%);
+
+}
+
+
+/* Thank you Modal */
+
+.thankyou-img {
+  margin: 1em auto 3em;
+}
+
+.thankyou-container {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  bottom: 15%;
+  /* height: 100vh;
+  width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all 200ms ease-in-out;
+}
+
+input {
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  padding: .8em 1em;
+  margin-bottom: 2.5em;
+  text-align: center;
+  background: hsl(214, 19%, 21%);
+  color: hsl(25, 97%, 53%);
+  font-size: 1rem;
+}
+
+.thankyou-container .title,
+.thankyou-container .body-text {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+
+
+.modal {
+  
+  background: hsla(214, 19%, 21%, 1);
+  width: 375px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* Dynamic Class */
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+}
